@@ -26,11 +26,11 @@ let discountType;
 
 if (userAge >= 65) {
 	discount = 0.4;
-	discountType= 'over 65'
+	discountType= 'over 65';
 } else if (userAge < 18) {
 	discount = 0.2;
-	discountType= 'minorenni'
-} else {}
+	discountType= 'minorenni';
+}
 
 let discounted = (price * discount);
 
@@ -40,8 +40,6 @@ const myOutput = document.getElementById("my-output");
 
 myOutput.innerHTML = `Hai scelto di viaggiare per ${km} km. Il prezzo del tuo biglietto è: <strong>${finalPrice} €</strong>`;
 
-if (userAge >= 18  && userAge < 65 ) {
-
-} else {
+if (userAge < 18  || userAge >= 65 ) {
 	myOutput.innerHTML += `<div>Il prezzo iniziale era di <span style="text-decoration: line-through;">${price.toFixed(2)} €</span>.	Grazie allo sconto ${discountType} hai risparmiato <em style="color:red;">${discounted.toFixed(2)} €</em></div>`;
 }
