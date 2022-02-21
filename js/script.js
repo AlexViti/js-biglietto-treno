@@ -1,5 +1,14 @@
 let userAge = prompt("Quanti anni hai?");
+
+while (isNaN(userAge)) {
+	userAge = prompt("Per favore, inserisci un numero per indicare la tua età.");
+}
+
 let km = prompt("Quanti km devi percorrere?");
+
+while (isNaN(km)) {
+	km = prompt("Per favore, inserisci un numero per indicare la distanza che vuoi percorrere.");
+}
 
 const priceAtKm = 0.21;
 let price = (priceAtKm * km);
