@@ -26,13 +26,11 @@ let discountType;
 
 if (userAge >= 65) {
 	discount = 0.4;
-	discountType= 'pensionati'
+	discountType= 'over 65'
 } else if (userAge < 18) {
 	discount = 0.2;
 	discountType= 'minorenni'
-} else {
-	discount = 0;
-}
+} else {}
 
 let discounted = (price * discount);
 
